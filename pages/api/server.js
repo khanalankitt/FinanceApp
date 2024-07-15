@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
-import { ConnectionStr } from '@/lib/db';
-import { NextResponse } from "next/server";
+import User from '@/app/model/model';
 
-export async function GET () {
-    await mongoose.connect(ConnectionStr);
-    return NextResponse.json({ status: 'connected', result: true });
+export default async function GET (req,res) {
+    await mongoose.connect('mongodb+srv://invia295:lIKBCAPjPVkI76jy@staking.cianjhk.mongodb.net/Finance?retryWrites=true&w=majority&appName=Staking');
+    const {email,password} = req.body;
+    const newUser =  new User({email,password});
+    await newUser.save();
 }

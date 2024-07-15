@@ -1,4 +1,4 @@
-// File: /Users/nissangautam/Desktop/workshop/Finance/app/(auth)/layout.jsx
+// File: C:\Users\ONC\OneDrive\Desktop\Nishan Finance App\FinanceApp\app\(auth)\layout.jsx
 import * as entry from '../../../../app/(auth)/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
